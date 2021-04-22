@@ -19,7 +19,7 @@ resumo = {'Cliente':'cliente', 'Lanche':'food', 'Recheio': 'recheio', 'Qtd': 'qt
 def get_principal():
     global x, y, food, recheio, qtd, pagto, resumo
 
-    position = pt.locateOnScreen('whatsaap/sorriso_clip.png', confidence=.6)
+    position = pt.locateOnScreen('sorriso_clip.png', confidence=.6)
     x = position[0]
     y = position[1]
     pt.moveTo(x, y, duration=.5)
@@ -37,7 +37,7 @@ def get_principal():
 def post_response(message):
     global x, y
 
-    position = pt.locateOnScreen('whatsaap/sorriso_clip.png', confidence=.6)
+    position = pt.locateOnScreen('sorriso_clip.png', confidence=.6)
     x = position[0]
     y = position[1]
     pt.moveTo(x + 200, y + 20, duration=.5)
@@ -196,7 +196,7 @@ def check_new_message():
 
     while True:
         try:
-            position = pt.locateOnScreen('whatsaap/green_circle.png', confidence=.7)
+            position = pt.locateOnScreen('green_circle.png', confidence=.7)
 
             if position is not None:
                 pt.moveTo(position)
@@ -224,7 +224,7 @@ def process_resume(message):
 def get_name():
     global x, y, food, recheio, qtd, pagto, resumo
 
-    position = pt.locateOnScreen('whatsaap/pesquisa.png', confidence=.6)
+    position = pt.locateOnScreen('pesquisa.png', confidence=.6)
     x = position[0]
     y = position[1]
     pt.moveTo(x, y, duration=.5)
@@ -235,7 +235,7 @@ def get_name():
 def contact_info():
     global x, y, food, recheio, qtd, pagto, resumo
 
-    position = pt.locateOnScreen('whatsaap/contact_info.png', confidence=.7)
+    position = pt.locateOnScreen('contact_info.png', confidence=.7)
     x = position[0]
     y = position[1]
     pt.moveTo(x, y, duration=.5)
@@ -254,7 +254,7 @@ def contact_info():
 def send_resumo():
     global x, y, food, recheio, qtd, pagto, resumo
 
-    position = pt.locateOnScreen('whatsaap/contact_info.png', confidence=.7)
+    position = pt.locateOnScreen('contact_info.png', confidence=.7)
     x = position[0]
     y = position[1]
     pt.moveTo(x, y, duration=.5)
